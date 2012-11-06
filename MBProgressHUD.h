@@ -311,42 +311,42 @@ typedef void (^MBProgressHUDCompletionBlock)();
 /** 
  * The opacity of the HUD window. Defaults to 0.8 (80% opacity). 
  */
-@property (atomic, assign) float opacity;
+@property (atomic, assign) float opacity UI_APPEARANCE_SELECTOR;
 
 /**
  * The color of the HUD window. Defaults to black. If this property is set, color is set using
  * this UIColor and the opacity property is not used.  using retain because performing copy on
  * UIColor base colors (like [UIColor greenColor]) cause problems with the copyZone.
  */
-@property (atomic, MB_STRONG) UIColor *color;
+@property (atomic, MB_STRONG) UIColor *color UI_APPEARANCE_SELECTOR;
 
 /**
  * The color of the boder of the HUD window. Defaults is nil. If this property is set, color is set using
  * this UIColor and the opacity property is not used. If nil, the border is not drawn. using retain because 
  * performing copy on UIColor base colors (like [UIColor greenColor]) cause problems with the copyZone.
  */
-@property (atomic, MB_STRONG) UIColor *borderColor;
+@property (atomic, MB_STRONG) UIColor *borderColor UI_APPEARANCE_SELECTOR;
 
 /** 
  * The x-axis offset of the HUD relative to the centre of the superview. 
  */
-@property (atomic, assign) float xOffset;
+@property (atomic, assign) float xOffset UI_APPEARANCE_SELECTOR;
 
 /** 
  * The y-ayis offset of the HUD relative to the centre of the superview. 
  */
-@property (atomic, assign) float yOffset;
+@property (atomic, assign) float yOffset UI_APPEARANCE_SELECTOR;
 
 /**
  * The amounth of space between the HUD edge and the HUD elements (labels, indicators or custom views). 
  * Defaults to 20.0
  */
-@property (atomic, assign) float margin;
+@property (atomic, assign) float margin UI_APPEARANCE_SELECTOR;
 
 /** 
  * Cover the HUD background view with a radial gradient. 
  */
-@property (atomic, assign) BOOL dimBackground;
+@property (atomic, assign) BOOL dimBackground UI_APPEARANCE_SELECTOR;
 
 /*
  * Grace period is the time (in seconds) that the invoked method may be run without 
@@ -385,12 +385,12 @@ typedef void (^MBProgressHUDCompletionBlock)();
 /** 
  * Font to be used for the main label. Set this property if the default is not adequate. 
  */
-@property (atomic, MB_STRONG) UIFont* labelFont;
+@property (atomic, MB_STRONG) UIFont* labelFont UI_APPEARANCE_SELECTOR;
 
 /** 
  * Font to be used for the details label. Set this property if the default is not adequate. 
  */
-@property (atomic, MB_STRONG) UIFont* detailsLabelFont;
+@property (atomic, MB_STRONG) UIFont* detailsLabelFont UI_APPEARANCE_SELECTOR;
 
 /** 
  * The progress of the progress indicator, from 0.0 to 1.0. Defaults to 0.0. 
@@ -400,12 +400,12 @@ typedef void (^MBProgressHUDCompletionBlock)();
 /**
  * The minimum size of the HUD bezel. Defaults to CGSizeZero (no minimum size).
  */
-@property (atomic, assign) CGSize minSize;
+@property (atomic, assign) CGSize minSize UI_APPEARANCE_SELECTOR;
 
 /**
  * Force the HUD dimensions to be equal if possible. 
  */
-@property (atomic, assign, getter = isSquare) BOOL square;
+@property (atomic, assign, getter = isSquare) BOOL square UI_APPEARANCE_SELECTOR;
 
 @end
 
