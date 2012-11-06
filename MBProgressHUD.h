@@ -311,7 +311,7 @@ typedef void (^MBProgressHUDCompletionBlock)();
 /** 
  * The opacity of the HUD window. Defaults to 0.8 (80% opacity). 
  */
-@property (atomic, assign) float opacity UI_APPEARANCE_SELECTOR;
+@property (atomic, assign) CGFloat opacity UI_APPEARANCE_SELECTOR;
 
 /**
  * The color of the HUD window. Defaults to black. If this property is set, color is set using
@@ -330,23 +330,23 @@ typedef void (^MBProgressHUDCompletionBlock)();
 /** 
  * The x-axis offset of the HUD relative to the centre of the superview. 
  */
-@property (atomic, assign) float xOffset UI_APPEARANCE_SELECTOR;
+@property (atomic, assign) CGFloat xOffset UI_APPEARANCE_SELECTOR;
 
 /** 
  * The y-ayis offset of the HUD relative to the centre of the superview. 
  */
-@property (atomic, assign) float yOffset UI_APPEARANCE_SELECTOR;
+@property (atomic, assign) CGFloat yOffset UI_APPEARANCE_SELECTOR;
 
 /**
  * The amounth of space between the HUD edge and the HUD elements (labels, indicators or custom views). 
  * Defaults to 20.0
  */
-@property (atomic, assign) float margin UI_APPEARANCE_SELECTOR;
+@property (atomic, assign) CGFloat margin UI_APPEARANCE_SELECTOR;
 
 /** 
  * Cover the HUD background view with a radial gradient. 
  */
-@property (atomic, assign) BOOL dimBackground UI_APPEARANCE_SELECTOR;
+@property (atomic, assign) BOOL dimBackground;
 
 /*
  * Grace period is the time (in seconds) that the invoked method may be run without 
@@ -400,12 +400,12 @@ typedef void (^MBProgressHUDCompletionBlock)();
 /**
  * The minimum size of the HUD bezel. Defaults to CGSizeZero (no minimum size).
  */
-@property (atomic, assign) CGSize minSize UI_APPEARANCE_SELECTOR;
+@property (atomic, assign) CGSize minSize;
 
 /**
  * Force the HUD dimensions to be equal if possible. 
  */
-@property (atomic, assign, getter = isSquare) BOOL square UI_APPEARANCE_SELECTOR;
+@property (atomic, assign, getter = isSquare) BOOL square;
 
 @end
 

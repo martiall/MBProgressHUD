@@ -156,18 +156,16 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 		// Set default values for properties
 		self.animationType = MBProgressHUDAnimationFade;
 		self.mode = MBProgressHUDModeIndeterminate;
-		self.labelText = nil;
-		self.detailsLabelText = nil;
-		self.opacity = 0.8f;
-        self.color = nil;
-		self.labelFont = [UIFont boldSystemFontOfSize:kLabelFontSize];
-		self.detailsLabelFont = [UIFont boldSystemFontOfSize:kDetailsLabelFontSize];
-		self.xOffset = 0.0f;
-		self.yOffset = 0.0f;
+		
+		if(self.opacity == 0.f)
+			self.opacity = 0.8f;
+		if(self.labelFont == nil)
+			self.labelFont = [UIFont boldSystemFontOfSize:kLabelFontSize];
+		if(self.detailsLabelFont == nil)
+			self.detailsLabelFont = [UIFont boldSystemFontOfSize:kDetailsLabelFontSize];
 		self.dimBackground = NO;
-		self.margin = 20.0f;
-		self.graceTime = 0.0f;
-		self.minShowTime = 0.0f;
+		if(self.margin == 0.f)
+			self.margin = 20.0f;
 		self.removeFromSuperViewOnHide = NO;
 		self.minSize = CGSizeZero;
 		self.square = NO;
