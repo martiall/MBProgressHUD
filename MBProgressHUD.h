@@ -320,6 +320,13 @@ typedef void (^MBProgressHUDCompletionBlock)();
  */
 @property (atomic, MB_STRONG) UIColor *color;
 
+/**
+ * The color of the boder of the HUD window. Defaults is nil. If this property is set, color is set using
+ * this UIColor and the opacity property is not used. If nil, the border is not drawn. using retain because 
+ * performing copy on UIColor base colors (like [UIColor greenColor]) cause problems with the copyZone.
+ */
+@property (atomic, MB_STRONG) UIColor *borderColor;
+
 /** 
  * The x-axis offset of the HUD relative to the centre of the superview. 
  */
